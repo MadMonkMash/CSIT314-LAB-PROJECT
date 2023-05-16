@@ -7,7 +7,7 @@ from flask_cors import cross_origin, CORS
 from database import session_factory
 
 @app.route('/professionalAcceptRequest/<int:id>', methods=['PUT'])
-function professional_accept_request(id):
+def professional_accept_request(id):
     session = session_factory()
     professionalServiceRequest = session.query(professionalServiceRequest).get(id)
     if not professionalServiceRequest:
